@@ -14,3 +14,7 @@ a{
 h1{
   font-size: 56px;
 }
+
+audio{
+  display: none;
+}
