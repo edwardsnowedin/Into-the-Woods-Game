@@ -1,3 +1,8 @@
+/*
+------------------------------------------------------------------------
+GLOBAL STYLES///////////////////////////////////////////////////////////
+------------------------------------------------------------------------
+*/
 body{
   background: url('../img/forest2.jpg') no-repeat center center fixed;
   background-size: cover;
@@ -22,4 +27,20 @@ h1{
 
 audio{
   display: none;
+}
+
+/*
+------------------------------------------------------------------------
+GLOBAL STYLES///////////////////////////////////////////////////////////
+------------------------------------------------------------------------
+*/
+
+div.flex-container{
+  border: 2px solid #fff;
+  height: 400px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
