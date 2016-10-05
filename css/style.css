@@ -8,7 +8,12 @@ body{
 
 a{
   text-decoration: none;
-  margin-left: 5px;
+  color: #fff;
+}
+
+
+a:hover{
+  color: #830303;
 }
 
 h1{
