@@ -4,22 +4,14 @@ GLOBAL STYLES///////////////////////////////////////////////////////////
 ------------------------------------------------------------------------
 */
 body{
-  background: url('../img/forest2.jpg') no-repeat center center fixed;
+  background: url('../img/cave1.jpg') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Press Start 2P', cursive;
   color: #fff;
   text-align: center;
-};
-
-a{
-  text-decoration: none;
-  color: #fff;
+  margin:
 }
 
-
-a:hover{
-  color: #830303;
-}
 
 h1{
   font-size: 56px;
@@ -29,18 +21,70 @@ audio{
   display: none;
 }
 
+img{
+  height: 100px;
+  width: 80px;
+}
 /*
 ------------------------------------------------------------------------
-GLOBAL STYLES///////////////////////////////////////////////////////////
+Index STYLES///////////////////////////////////////////////////////////
 ------------------------------------------------------------------------
 */
+a{
+  text-decoration: none;
+  color: #fff;
+}
 
-div.flex-container{
+a:hover{
+  color: #830303;
+}
+
+main{
   border: 2px solid #fff;
-  height: 400px;
   width: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
+  height: 250px;
+  margin: 30px auto;
+  box-shadow: 0 0 .5em #fff;
+}
+
+section{
+  margin: 40px;
+}
+
+button{
+  border: 0;
+}
+
+
+input['type=text']{
+  opacity: 0.7;
+  border: 2px solid #fff;
+  border-radius: 0;
+}
+
+input:focus{
+  background:
+}
+
+footer{
+  position: relative;
+  top: 100px;
+
+}
+
+.link{
+  float: left;
+}
+
+.music{
+  float: right;
+}
+
+/*
+------------------------------------------------------------------------
+About STYLES///////////////////////////////////////////////////////////
+------------------------------------------------------------------------
+*/
+p{
+  line-height: 40px;
 }
