@@ -1,45 +1,9 @@
 console.log('JS is linked!');
-
-// /*$(document).ready(function () {
-//   $('h1').show('highlight',{'color': '#C8FB5E'},'fast');
-// })
-//
-// alert('Game On!');*/
-//
-// var $audio = $('<audio></audio>');
-//
-// var $audioToBody = $($audio).attr({
-//     'src':'./audio/caveDrip.mp3',
-//     'volume':1.0,
-//     'autoplay':'autoplay',
-//     'loop': 'true'
-// }).appendTo("body");
-//
-// var $cssAudio = $($audioToBody).css('display': 'none');
-//
-// $(document).ready(function() {
-//   $("").click(function(){
-//   $(".jane").effect( "bounce", {times:3}, 300 );
-//         });
-//     });
-
-// // $(document).ready(function() {
-// // Function to update counters on all elements with class counter
-//   var doUpdate = function() {
-//     $('.countdown').each(function() {
-//       var count = parseInt($(this).html());
-//         if (count !== 0) {
-//           $(this).html(count - 1);
-//           }
-//         });
-//       };
-//
-//     // Schedule the update to happen once every second
-//     setInterval(doUpdate, 1000);
-//     });
+var deathCounter;
 
 
-var count = 30;
+
+var count = 60;
 
 var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
 
@@ -58,24 +22,26 @@ function timer()
 
 //Main character controls
 $(document).keydown(function(e) {
+    var $img = $('.jane');
     switch (e.which) {
     case 37:
-        $('.jane').finish().animate({
+        $($img).finish().animate({
             left: '-=40'
-        }); //left arrow key
+        });
+        //left arrow key
         break;
     case 38:
-        $('.jane').finish().animate({
+        $($img).finish().animate({
             top: '-=40'
         }); //up arrow key
         break;
     case 39:
-        $('.jane').finish().animate({
+        $($img).finish().animate({
             left: '+=40'
         }); //right arrow key
         break;
     case 40:
-        $('.jane').finish().animate({
+        $($img).finish().animate({
             top: '+=40'
         }); //bottom arrow key
         break;
@@ -86,10 +52,14 @@ function moveSkull() {
     var $img = $(".bad-guy");
 
     $img.fadeOut(1000, function() {
-        var maxLeft = $(window).width() - $img.width();
-        var maxTop = $(window).height() - $img.height();
-        var leftPos = Math.floor(Math.random() * (maxLeft + 1))
-        var topPos = Math.floor(Math.random() * (maxTop + 1))
+        var maxLeft = $('.game-board').width() - $img.width();
+        console.log(maxLeft);
+        var maxTop = $('.game-board').height() - $img.height();
+        console.log(maxLeft);
+        var leftPos = Math.floor(Math.random() * (maxLeft + 1));
+        console.log(maxLeft);
+        var topPos = Math.floor(Math.random() * (maxTop + 1));
+        console.log(maxLeft);
 
         $img.css({ left: leftPos, top: topPos }).fadeIn(1000);
     });
@@ -102,9 +72,9 @@ function moveJason() {
     var $img = $(".jason");
 
     $img.fadeOut(1000, function() {
-        var maxLeft = $(window).width() - $img.width();
+        var maxLeft = $('.game-board').width() - $img.width();
         console.log(maxLeft);
-        var maxTop = $(window).height() - $img.height();
+        var maxTop = $('.game-board').height() - $img.height();
         var leftPos = Math.floor(Math.random() * (maxLeft + 1))
         var topPos = Math.floor(Math.random() * (maxTop + 1))
 
@@ -119,15 +89,30 @@ function moveDracula() {
     var $img = $(".dracula");
 
     $img.fadeOut(1000, function() {
-        var maxLeft = $(window).width() - $img.width();
+        var maxLeft = $('.game-board').width() - $img.width();
         console.log(maxLeft);
-        var maxTop = $(window).height() - $img.height();
-        var leftPos = Math.floor(Math.random() * (maxLeft + 1))
-        var topPos = Math.floor(Math.random() * (maxTop + 1))
-
+        var maxTop = $('.game-board').height() - $img.height();
+        var leftPos = Math.floor(Math.random() * (maxLeft + 1));
+        var topPos = Math.floor(Math.random() * (maxTop + 1));
         $img.css({ left: leftPos, top: topPos }).fadeIn(1000);
     });
 };
 
 moveDracula();
 setInterval(moveDracula, 1000);
+
+function moveZombie() {
+    var $img = $(".zombie");
+
+    $img.fadeOut(1000, function() {
+        var maxLeft = $('.game-board').width() - $img.width();
+        var maxTop = $('.game-board').height() - $img.height();
+        var leftPos = Math.floor(Math.random() * (maxLeft + 1));
+        var topPos = Math.floor(Math.random() * (maxTop + 1));
+
+        $img.css({ left: leftPos, top: topPos }).fadeIn(1000);
+    });
+};
+
+moveZombie();
+setInterval(moveZombie, 1000);

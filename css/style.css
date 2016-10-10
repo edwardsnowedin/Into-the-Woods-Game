@@ -14,7 +14,7 @@ body{
 
 
 h1{
-  font-size: 56px;
+  font-size: 42px;
 }
 
 audio{
@@ -24,6 +24,10 @@ audio{
 img{
   height: 100px;
   width: 80px;
+}
+
+footer{
+  clear: both;
 }
 /*
 ------------------------------------------------------------------------
@@ -108,7 +112,7 @@ Game STYLES///////////////////////////////////////////////////////////
   width: 200px;
 	height: 400px;
   float: right;
-	border: 1px solid #fff;
+	border: 2px double #fff;
   -moz-border-radius:15px;
   -webkit-border-radius:15px;
   border-radius:15px;
@@ -139,4 +143,14 @@ Game STYLES///////////////////////////////////////////////////////////
   position: absolute;
   width: 55px;
   height: 55px;
+}
+
+.game-btn{
+  border: none;
+  border-radius: 5px;
+  background: #000;
+  opacity: 0.7;
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
 }
