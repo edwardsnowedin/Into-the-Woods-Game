@@ -1,4 +1,5 @@
 console.log('JS is linked!');
+
 var deathCounter;
 
 
@@ -14,11 +15,16 @@ function timer()
   {
      clearInterval(counter);
      //counter ended
-     return alert('Time\'s up!');
+     return $('.timer-notification').html('Time is up!');
   }
 
-  $('.countdown').html(count + " secs");
+  $('.countdown').html(count + 'secs');
 }
+
+//restart game
+$( ".restart-btn" ).click(function() {
+    location.reload(true);
+});
 
 //Main character controls
 $(document).keydown(function(e) {
