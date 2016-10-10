@@ -37,6 +37,26 @@ console.log('JS is linked!');
 //     // Schedule the update to happen once every second
 //     setInterval(doUpdate, 1000);
 //     });
+
+
+var count = 30;
+
+var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
+
+function timer()
+{
+  count = count-1;
+  if (count <= 0)
+  {
+     clearInterval(counter);
+     //counter ended, do something here
+     return;
+  }
+
+  //Do code for showing the number of seconds here
+  $('.countdown').html(count + " secs");
+}
+
 //Main character controls
 $(document).keydown(function(e) {
     switch (e.which) {
@@ -62,3 +82,53 @@ $(document).keydown(function(e) {
         break;
     }
 })
+
+function moveSkull() {
+    var $img = $(".bad-guy");
+
+    $img.fadeOut(1000, function() {
+        var maxLeft = $(window).width() - $img.width();
+        var maxTop = $(window).height() - $img.height();
+        var leftPos = Math.floor(Math.random() * (maxLeft + 1))
+        var topPos = Math.floor(Math.random() * (maxTop + 1))
+
+        $img.css({ left: leftPos, top: topPos }).fadeIn(1000);
+    });
+};
+
+moveSkull();
+setInterval(moveSkull, 1000);
+
+function moveJason() {
+    var $img = $(".jason");
+
+    $img.fadeOut(1000, function() {
+        var maxLeft = $(window).width() - $img.width();
+        console.log(maxLeft);
+        var maxTop = $(window).height() - $img.height();
+        var leftPos = Math.floor(Math.random() * (maxLeft + 1))
+        var topPos = Math.floor(Math.random() * (maxTop + 1))
+
+        $img.css({ left: leftPos, top: topPos }).fadeIn(1000);
+    });
+};
+
+moveJason();
+setInterval(moveJason, 1000);
+
+function moveDracula() {
+    var $img = $(".dracula");
+
+    $img.fadeOut(1000, function() {
+        var maxLeft = $(window).width() - $img.width();
+        console.log(maxLeft);
+        var maxTop = $(window).height() - $img.height();
+        var leftPos = Math.floor(Math.random() * (maxLeft + 1))
+        var topPos = Math.floor(Math.random() * (maxTop + 1))
+
+        $img.css({ left: leftPos, top: topPos }).fadeIn(1000);
+    });
+};
+
+moveDracula();
+setInterval(moveDracula, 1000);

@@ -96,8 +96,35 @@ Game STYLES///////////////////////////////////////////////////////////
 ------------------------------------------------------------------------
 */
 
+.game-board{
+  position: absolute;
+  border: 2px inset #fff;
+  width: ;
+  height: 350px;
+  margin: 30px auto;
+}
+
 .jane{
-    position: absolute;
-    top: 0;
-    left: 0;
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bad-guy{
+  position: absolute;
+  width: 55px;
+  height: 55px;
+}
+
+.jason{
+  position: absolute;
+  width: 55px;
+  height: 55px;
+}
+.dracula{
+  position: absolute;
+  width: 55px;
+  height: 55px;
 }
