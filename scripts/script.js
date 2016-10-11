@@ -53,7 +53,7 @@ $(document).keydown(function(e) {
         break;
     }
 })
-
+//source from JSFIDDLE
 function moveSkull() {
     var $img = $(".bad-guy");
 
